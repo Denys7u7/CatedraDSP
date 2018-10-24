@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SparesDSPModelStoreContainer" CdmEntityContainer="SparesDSPEntities">
+    <EntitySetMapping Name="producto">
+      <EntityTypeMapping TypeName="SparesDSPModel.producto">
+        <MappingFragment StoreEntitySet="producto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="catidadExistentes" ColumnName="catidadExistentes" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_user">
+      <EntityTypeMapping TypeName="SparesDSPModel.tipo_user">
+        <MappingFragment StoreEntitySet="tipo_user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="SparesDSPModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="DUI" ColumnName="DUI" />
+          <ScalarProperty Name="nomUser" ColumnName="nomUser" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vistaProductos">
+      <EntityTypeMapping TypeName="SparesDSPModel.vistaProductos">
+        <MappingFragment StoreEntitySet="vistaProductos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="buscarProducto" FunctionName="SparesDSPModel.Store.buscarProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SparesDSPModel.buscarProducto_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="buscarUser" FunctionName="SparesDSPModel.Store.buscarUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SparesDSPModel.buscarUser_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="DUI" ColumnName="DUI" />
+          <ScalarProperty Name="nomUser" ColumnName="nomUser" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="editarProductos" FunctionName="SparesDSPModel.Store.editarProductos" />
+    <FunctionImportMapping FunctionImportName="editarUsuario" FunctionName="SparesDSPModel.Store.editarUsuario" />
+    <FunctionImportMapping FunctionImportName="eliminarProducto" FunctionName="SparesDSPModel.Store.eliminarProducto" />
+    <FunctionImportMapping FunctionImportName="eliminarUsuario" FunctionName="SparesDSPModel.Store.eliminarUsuario" />
+    <FunctionImportMapping FunctionImportName="insertarProducto" FunctionName="SparesDSPModel.Store.insertarProducto" />
+    <FunctionImportMapping FunctionImportName="insertarUsuario" FunctionName="SparesDSPModel.Store.insertarUsuario" />
+    <FunctionImportMapping FunctionImportName="mostrarProducto" FunctionName="SparesDSPModel.Store.mostrarProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SparesDSPModel.mostrarProducto_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="mostrarUsuarios" FunctionName="SparesDSPModel.Store.mostrarUsuarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SparesDSPModel.mostrarUsuarios_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="DUI" ColumnName="DUI" />
+          <ScalarProperty Name="nomUser" ColumnName="nomUser" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
