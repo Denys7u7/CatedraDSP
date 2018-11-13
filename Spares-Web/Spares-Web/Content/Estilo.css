@@ -1,0 +1,84 @@
+﻿body {
+    background-image:url("https://images6.alphacoders.com/393/393647.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.image{
+    width: 98%;
+    margin: 1%;
+    height: 150px;
+    border: 1px solid white;
+}
+
+.descripcion,.marca,.categoria,.precio,.titulo{
+    font-family: 'Century Gothic';
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    color: white;
+}
+
+.marca,.categoria{
+    display: inline-block;
+    margin: auto;
+    text-align:center;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 3px;
+    width: 49%;
+}
+
+.marca{
+    background-color:rgb(118, 0, 19);
+}
+
+.categoria{
+    background-color: rgb(41, 1, 10);
+}
+
+.titulo{
+    font-size:17px;
+    font-weight:bold;
+    color:rgb(255,255,255);
+}
+
+.panel-estilo{
+    padding: 10px;
+    background-color: rgba(0,0,0,0.95);
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,1);
+    display:inline-block;
+}
+
+.tituloMain{
+    font-size:35px;
+    font-family: Helvetica,Arial, sans-serif;
+    font-weight: normal;
+}
+
+hr{
+    border: 1px solid white;
+    width:50%;
+    margin-bottom: 4%;
+}
+
+.btn-aniadir{
+    background-color:#266caa;
+    font-family:'Century Gothic',Roboto;
+    color: white;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.menu{
+    background-color:rgba(41, 1, 10,0.9);
+    color: white;
+}
+
+.Titulo-menu{
+    color:white;
+    font-family: 'Century Gothic';
+}

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using FormLogin.CapaNegocio;
+using FormLogin.CapaPresentacion;
 
 namespace CapaPresentacion
 {
@@ -31,63 +32,23 @@ namespace CapaPresentacion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            CNEmpleado objEmpleado = new CNEmpleado();
-            SqlDataReader Loguear;
+            CNUsuario objEmpleado = new CNUsuario();
             objEmpleado.Usuario = txtUsuario.Text;
             objEmpleado.Contraseña = txtPass.Text;
+            bool band = false;
+            bool band2 = false;
 
-            if(txtUsuario.Text == string.Empty)
+            FormMain ObjFP = new FormMain(txtUsuario.Text);
+            band = objEmpleado.logearse(ObjFP, lblErrorUsuario, lblErrorPass, lblErrorLogin,txtUsuario, txtPass);
+            if (band == true)
             {
-                lblErrorUsuario.Text = "Llene el campo usuario";
-                return;
+                this.Hide();
+                LimpiarForm();
             }
-            else
+            if (band2 == true)
             {
-                lblErrorUsuario.Text = string.Empty;
-            }
-            if(txtPass.Text == string.Empty)
-            {
-                lblErrorPass.Text = "Llene el campo de contraseña";
-                return;
-            }
-            else
-            {
-                lblErrorPass.Text = string.Empty;
-            }
-            if (objEmpleado.Usuario == txtUsuario.Text)
-            {
-                lblErrorUsuario.Visible = false;
-
-                if (objEmpleado.Contraseña == txtPass.Text)
-                {
-                    lblErrorPass.Visible = false;
-                    Loguear = objEmpleado.IniciarSesion();
-
-                    if (Loguear.Read() == true)
-                    {
-                        LimpiarForm();
-                        this.Hide();
-                        FormMain ObjFP = new FormMain();
-                        ObjFP.Show();
-                    }
-                    else
-                    {
-                        lblErrorLogin.Text = "Usuario o contraseña invalidas, intente de nuevo";
-                        lblErrorLogin.Visible = true;
-                        txtPass.Text = "";
-                        lblErrorUsuario.Focus();
-                    }
-                }
-                else
-                {
-                    lblErrorPass.Text = objEmpleado.Contraseña;
-                    lblErrorPass.Visible = true;
-                }
-            }
-            else
-            {
-                lblErrorUsuario.Text = objEmpleado.Usuario;
-                lblErrorUsuario.Visible = true;
+                this.Hide();
+                LimpiarForm();
             }
         }
 
@@ -98,6 +59,39 @@ namespace CapaPresentacion
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Seguro quiere salir del sistema", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

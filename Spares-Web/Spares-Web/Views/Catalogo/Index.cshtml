@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var ListaProducto = ViewBag.ListaProducto;
+}
+
+<h2 class="titulo tituloMain">Catalogo de Productos</h2>
+<hr />
+<div class="container">
+    <div class="row">
+        @foreach (var p in ListaProducto)
+        {
+            <div class="col-lg-3">
+                <div class="panel-estilo panel">
+                    <div class="panel-heading"><p class="titulo">@p.Producto</p></div>
+                    <div class="">
+                        <img class="image" src="data:image/jpg;base64,@Convert.ToBase64String(p.Imagen)"/>
+                        <p class="descripcion">@p.Descripcion</p>
+                        <p class="marca">@p.Marca</p>
+                        <p class="categoria">@p.Categoria</p>
+                        <p class="precio">Precio: $ @p.Precio USD</p>
+                        <button class="btn btn-aniadir text-center"><i class="fas fa-cart-plus"></i> Añadir</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

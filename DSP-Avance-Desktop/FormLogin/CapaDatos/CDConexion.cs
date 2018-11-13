@@ -10,7 +10,7 @@ namespace FormLogin.CapaDatos
 {
     class CDConexion
     {
-        private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-4Q6TNPJ;DataBase=SparesDSP;Integrated Security=true");
+        private SqlConnection Conexion = new SqlConnection("Server=localhost;DataBase=SparesDSP;" + "Trusted_Connection=True;MultipleActiveResultSets=true; Persist Security Info=True");
 
         public SqlConnection AbrirConexion()
         {

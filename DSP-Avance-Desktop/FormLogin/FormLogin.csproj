@@ -45,22 +45,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapaDatos\CDCategoria.cs" />
     <Compile Include="CapaDatos\CDConexion.cs" />
     <Compile Include="CapaDatos\CDEmpleado.cs" />
-    <Compile Include="CapaDatos\CDProductos.cs" />
+    <Compile Include="CapaDatos\CDMarca.cs" />
+    <Compile Include="CapaDatos\CDProducto.cs" />
+    <Compile Include="CapaDatos\CDProveedor.cs" />
+    <Compile Include="CapaDatos\CDUsuario.cs" />
+    <Compile Include="CapaNegocio\CNCategoria.cs" />
     <Compile Include="CapaNegocio\CNEmpleado.cs" />
-    <Compile Include="CapaNegocio\CNProductos.cs" />
+    <Compile Include="CapaNegocio\CNMarca.cs" />
+    <Compile Include="CapaNegocio\CNProducto.cs" />
+    <Compile Include="CapaNegocio\CNProveedor.cs" />
+    <Compile Include="CapaNegocio\CNUsuario.cs" />
     <Compile Include="CapaPresentacion\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CapaPresentacion\Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaPresentacion\FormInventario.cs">
+    <Compile Include="CapaPresentacion\FormCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaPresentacion\FormInventario.Designer.cs">
-      <DependentUpon>FormInventario.cs</DependentUpon>
+    <Compile Include="CapaPresentacion\FormCategoria.Designer.cs">
+      <DependentUpon>FormCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\FormMain.cs">
       <SubType>Form</SubType>
@@ -68,25 +76,61 @@
     <Compile Include="CapaPresentacion\FormMain.designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaPresentacion\FormUsuarios.cs">
+    <Compile Include="CapaPresentacion\FormEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaPresentacion\FormUsuarios.Designer.cs">
-      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    <Compile Include="CapaPresentacion\FormEmpleado.Designer.cs">
+      <DependentUpon>FormEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FormMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FormMarca.Designer.cs">
+      <DependentUpon>FormMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FormProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FormProveedor.Designer.cs">
+      <DependentUpon>FormProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FromProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FromProducto.Designer.cs">
+      <DependentUpon>FromProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CapaPresentacion\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaPresentacion\FormInventario.resx">
-      <DependentUpon>FormInventario.cs</DependentUpon>
+    <EmbeddedResource Include="CapaPresentacion\FormCategoria.resx">
+      <DependentUpon>FormCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaPresentacion\FormUsuarios.resx">
-      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="CapaPresentacion\FormEmpleado.resx">
+      <DependentUpon>FormEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FormMarca.resx">
+      <DependentUpon>FormMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FormProveedor.resx">
+      <DependentUpon>FormProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FromProducto.resx">
+      <DependentUpon>FromProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +142,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +173,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sin título-2.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers-icon-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32170.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchcircularbutton_79274.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13311.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedores.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleados.fw.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

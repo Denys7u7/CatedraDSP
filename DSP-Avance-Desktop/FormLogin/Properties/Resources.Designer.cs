@@ -63,6 +63,36 @@ namespace FormLogin.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _13311 {
+            get {
+                object obj = ResourceManager.GetObject("_13311", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _32170 {
+            get {
+                object obj = ResourceManager.GetObject("_32170", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _default {
+            get {
+                object obj = ResourceManager.GetObject("_default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Atras {
             get {
                 object obj = ResourceManager.GetObject("Atras", resourceCulture);
@@ -83,6 +113,26 @@ namespace FormLogin.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap customers_icon_3 {
+            get {
+                object obj = ResourceManager.GetObject("customers_icon_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap empleados_fw {
+            get {
+                object obj = ResourceManager.GetObject("empleados.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fondo_fw {
             get {
                 object obj = ResourceManager.GetObject("Fondo_fw", resourceCulture);
@@ -96,6 +146,26 @@ namespace FormLogin.Properties {
         internal static System.Drawing.Bitmap inventario_fw {
             get {
                 object obj = ResourceManager.GetObject("inventario_fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap proveedores_fw {
+            get {
+                object obj = ResourceManager.GetObject("proveedores_fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Upload {
+            get {
+                object obj = ResourceManager.GetObject("Upload", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
