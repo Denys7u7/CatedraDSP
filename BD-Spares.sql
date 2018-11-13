@@ -352,17 +352,7 @@ create proc logearse
 @pass nvarchar(30)
 ) as
 begin
-	select * from usuario where [Nombre de usuario]=@usuario AND Contrasenya = @pass AND Tipo=1;
-end
-GO
-
-create proc logearse_usuario
-(
-@usuario varchar(50),
-@pass nvarchar(30)
-) as
-begin
-	select * from usuario where [Nombre de usuario]=@usuario AND Contrasenya = @pass AND Tipo=2;
+	select * from usuario where [Nombre de usuario]=@usuario AND Contrasenya = @pass;
 end
 GO
 
